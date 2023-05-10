@@ -1,3 +1,30 @@
-html {
-  scroll-behavior: smooth;
+table {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+th, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 100%;
+  padding: 8px;
+}
+
+th {
+  width: 100%;
+  background-color: rgb(57, 183, 225);
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(201, 234, 234, 0.4);
+}
+
+tr:hover {
+  background-color:rgba(166, 167, 168, 0.5);
+}
+
+td {
+  text-align: left;
+  color: #333;
 }
