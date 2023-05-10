@@ -3,22 +3,26 @@ export function ProductsIndex(props) {
   return (
     <div>
       <h1>Welcome to Scout: Webscraper!</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {props.products.map((product) => (
-            <tr key={product.name}>
-              <td className="product-name">{product.name}</td>
-              <td className="product-price">{product.price}</td>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>MAP</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {props.products.map((product) => (
+              <tr key={product.name}>
+                <td className="product-name">{product.name}</td>
+                <td className="product-price">{product.price}</td>
+                <td className="product-map-price">$14.99</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
