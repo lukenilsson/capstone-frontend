@@ -6,6 +6,28 @@ h1 {
   color: black;
 }
 
+
+.centered-container {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.centered-content {
+  text-align: center;
+}
+
+.home-image img{
+  background-color: rgb(191, 215, 225);
+  width: 50%;
+  border-radius: 30%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
 table {
   border-collapse: collapse;
   width: 90%;
