@@ -13,7 +13,7 @@ export function Signup() {
       .then((response) => {
         console.log(response.data);
         event.target.reset();
-        window.location.href = "/"; // Change this to hide a modal, redirect to a specific page, etc.
+        window.location.href = "/home"; // Change this to hide a modal, redirect to a specific page, etc.
       })
       .catch((error) => {
         console.log(error.response.data.errors);
@@ -31,10 +31,10 @@ export function Signup() {
       </ul>
       <form onSubmit={handleSubmit}>
         <div>
-          First Name: <input name="first-name" type="text" />
+          First Name: <input name="first_name" type="text" />
         </div>
         <div>
-          Last Name: <input name="last-name" type="text" />
+          Last Name: <input name="last_name" type="text" />
         </div>
         <div>
           Email: <input name="email" type="email" />
@@ -43,7 +43,7 @@ export function Signup() {
           Password: <input name="password" type="password" />
         </div>
         <div>
-          Password confirmation:{" "}
+          Password confirmation:
           <input name="password_confirmation" type="password" />
         </div>
         <button type="submit">Signup</button>

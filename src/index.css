@@ -12,7 +12,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 }
 
 .centered-content {
@@ -21,10 +21,9 @@ h1 {
 
 .home-image img{
   background-color: rgb(191, 215, 225);
-  width: 50%;
+  width: 40%;
   border-radius: 30%;
   margin-bottom: 20px;
-  margin-top: 20px;
 }
 
 
@@ -62,4 +61,29 @@ td {
 .table-container {
   width: 80%;
   margin: auto;
+}
+.scrape-tally {
+  border: .5px black solid;
+  background-color: rgba(245, 220, 122, 0.6);
+  border-radius: .6rem;
+  width: 30%;
+  padding: 1rem;
+  margin: auto;
+}
+
+.scrape-button {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  background-color: rgb(199, 190, 190, 0.6);
+  width: 50%;
+  padding: 1vh;
+  margin: auto;
+  cursor: pointer;
+  border-radius: .6rem;
+}
+.scrape-now-button {
+  text-decoration: none;
+  border-radius: .6rem;
+  color: black;
+  padding: 2vh;
 }

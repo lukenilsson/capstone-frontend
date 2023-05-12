@@ -1,8 +1,14 @@
 export function ProductsIndex(props) {
+  const currentDate = new Date().toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+  });
+
   console.log(props, "yo dawg");
   return (
-    <div>
-      <h1>Welcome to Scout: Webscraper!</h1>
+    <div className="page-container">
+      <h1>{currentDate}</h1>
       <div className="table-container">
         <table>
           <thead>

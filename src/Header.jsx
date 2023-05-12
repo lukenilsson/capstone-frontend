@@ -1,10 +1,17 @@
+import { Link } from "react-router-dom";
+import { LogoutLink } from "./LogoutLink";
+
 export function Header() {
   return (
     <header>
       <nav>
-        <a href="/home">Home</a> | <a href="/scraper">Scraper</a> |{" "}
-        <a href="/signup">Signup</a> | <a href="/login">Login</a> |{" "}
-        <a href="/logout">Logout</a>
+        <ul>
+          <Link to="/home">Home</Link> | <Link to="/scraper">Scraper</Link> |{" "}
+          <Link to="/signup">Signup</Link> | <Link to="/login">Login</Link> |{" "}
+          <Link to="/home">
+            <LogoutLink />
+          </Link>
+        </ul>
       </nav>
     </header>
   );
