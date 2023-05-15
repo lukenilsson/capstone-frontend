@@ -12,6 +12,16 @@ h3 {
 
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(191, 215, 225);
+  padding-top: 1rem;
+  color: white;
+  text-align: center;
+}
 
 .home-image img{
   background-color: rgb(191, 215, 225);
