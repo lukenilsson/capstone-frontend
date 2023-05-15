@@ -1,3 +1,5 @@
+import React from "react";
+
 export function ProductsIndex(props) {
   const currentDate = new Date().toLocaleDateString(undefined, {
     year: "numeric",
@@ -5,12 +7,48 @@ export function ProductsIndex(props) {
     day: "2-digit",
   });
 
-  console.log(props, "yo dawg");
+  const downloadCSV = () => {
+    const csvContent =
+      "data:text/csv;charset=utf-8," + encodeURI(createCSVData());
+    const link = document.createElement("a");
+    link.href = csvContent;
+    link.download = "products.csv";
+    link.click();
+  };
+
+  const createCSVData = () => {
+    const headers = Array.from(document.querySelectorAll("#data-table th")).map(
+      (th) => th.innerText
+    );
+    const rows = Array.from(
+      document.querySelectorAll("#data-table tbody tr")
+    ).map((row) => {
+      const rowData = Array.from(row.querySelectorAll("td")).map(
+        (td) => td.innerText
+      );
+      return rowData.join(",");
+    });
+
+    return [headers.join(","), ...rows].join("\n");
+  };
+
   return (
-    <div className="page-container">
-      <h1>{currentDate}</h1>
-      <div className="table-container">
-        <table>
+    <div className="container">
+      <div className="row mb-3">
+        <div className="col">
+          <h3>{currentDate}</h3>
+        </div>
+        <div className="col d-flex justify-content-end">
+          <button className="btn btn-primary btn-sm" onClick={downloadCSV}>
+            Download CSV
+          </button>
+        </div>
+      </div>
+      <div className="table-responsive">
+        <table
+          className="table table-primary table-striped table-hover"
+          id="data-table"
+        >
           <thead>
             <tr>
               <th>Name</th>

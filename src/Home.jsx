@@ -13,19 +13,26 @@ export function Home() {
   }, []);
 
   return (
-    <div className="page-container">
-      <div className="centered-container">
-        <div className="centered-content">
+    <div className="container-lg">
+      <div className="d-flex align-items-center justify-content-center h-100">
+        <div className="text-center">
           <h1>Welcome to Scout</h1>
-          <div className="home-image">
-            <img src={Scout_1} alt="My Image" />
+          <div
+            className="home-image"
+            style={{ width: "50%", margin: "0 auto" }}
+          >
+            <img src={Scout_1} alt="My Image" className="img-fluid" />
           </div>
-          <div className="scrape-tally">
-            <p>Chewy is selling {products.length} products.</p>
-            <div className="scrape-button">
-              <Link to="/scraper" className="scrape-now-button">
-                Scrape Now
-              </Link>
+          <div className="d-flex justify-content-center mt-4">
+            <div className="card" style={{ width: "50%" }}>
+              <div className="card-body">
+                <p className="card-text">
+                  Chewy is selling {products.length} products.
+                </p>
+                <Link to="/scraper" className="btn btn-primary">
+                  Scrape Now
+                </Link>
+              </div>
             </div>
           </div>
         </div>
