@@ -8,11 +8,13 @@ ReactJS frontend with Bootstrap and custom CSS.
 
 
 ## Installation
-bundle install
+npm install
+npm install axios --save
+
 
 ## Usage
 
-rails server
+npm run dev
 
 
 ## Roadmap
